@@ -5,4 +5,4 @@ def fizzbuzz():
         words = ""
         words += "Fizz" if i % 3 == 0 else ""
         words += "Buzz" if i % 5 == 0 else ""
-        print(words if words else i, end=" " if i != 100 else "")
+        print(words if words else i, end=" ")
