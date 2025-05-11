@@ -8,8 +8,9 @@ def infinite_add():
 
     for num in av:
         addition += int(num)
-        
+
     print(addition)
+
 
 if __name__ == "__main__":
     infinite_add()
