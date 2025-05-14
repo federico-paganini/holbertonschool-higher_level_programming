@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 
+
 def operations(a, b, op):
     from calculator_1 import add, sub, mul, div
-    
-    if op == '+':
+
+    if op == "+":
         return add(a, b)
 
-    if op == '-':
+    if op == "-":
         return sub(a, b)
 
-    if op == '*':
+    if op == "*":
         return mul(a, b)
 
-    if op == '/':
+    if op == "/":
         return div(a, b)
 
 
@@ -23,7 +24,7 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    if sys.argv[2] not in {'+', '-', '*', '/'}:
+    if sys.argv[2] not in {"+", "-", "*", "/"}:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
