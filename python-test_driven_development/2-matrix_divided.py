@@ -1,5 +1,19 @@
 #!/usr/bin/python3
+"""
+Module: matrix_divided
+
+This module provides a single function, `matrix_divided`, which divides all elements
+of a matrix by a given divisor. It validates that the matrix is a non-empty list of
+lists containing only integers or floats, with all rows having the same size.
+The division result is rounded to 2 decimal places.
+"""
+
+
 def matrix_divided(matrix, div):
+    """
+    Divides all elements of a matrix by a number and returns a new matrix
+    with results rounded to 2 decimal places.
+    """
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
