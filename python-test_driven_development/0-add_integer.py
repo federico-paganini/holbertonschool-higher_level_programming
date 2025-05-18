@@ -32,10 +32,10 @@ def add_integer(a, b=98):
     TypeError: a must be an integer
     """
 
-    if not isinstance(a, (float, int)):
+    if a is None or not isinstance(a, (float, int)):
         raise TypeError("a must be an integer")
 
-    if not isinstance(b, (int, float)):
+    if b is None or not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
     return int(a) + int(b)
