@@ -4,6 +4,7 @@ This module provides a function to add two integers or floats,
 casting them to integers first.
 """
 
+
 def add_integer(a, b=98):
     """
     Adds two integers or floats and returns the result as an integer.
@@ -30,11 +31,11 @@ def add_integer(a, b=98):
         ...
     TypeError: a must be an integer
     """
-      
+
     if not isinstance(a, (float, int)):
         raise TypeError("a must be an integer")
-    
+
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    
+
     return int(a) + int(b)
