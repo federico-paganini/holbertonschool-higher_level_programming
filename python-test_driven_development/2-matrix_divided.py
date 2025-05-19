@@ -1,42 +1,27 @@
 #!/usr/bin/python3
-"""
-This module provides a function to divide all elements of a matrix.
-"""
+"""Divide a matrix module"""
 
 
 def matrix_divided(matrix, div):
-    """
-    Divides all elements of a matrix by a given number.
-    """
-
-    # Verificación de que la matriz sea válida
-    if (
-        not isinstance(matrix, list)
-        or len(matrix) == 0
-        or not all(isinstance(row, list) for row in matrix)
-        or any(len(row) == 0 for row in matrix)
-    ):
-        raise TypeError(
-            "matrix must be a matrix (list of lists) of integers/floats"
-        )
-
-    # Verificación de tipos dentro de la matriz
-    if not all(isinstance(num, (int, float)) for row in matrix for num in row):
-        raise TypeError(
-            "matrix must be a matrix (list of lists) of integers/floats"
-        )
-
-    # Verificación de filas de igual tamaño
-    row_len = len(matrix[0])
-    if not all(len(row) == row_len for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-
-    # Verificación de divisor
-    if not isinstance(div, (int, float)):
+    """Write a function that divides all elements of a matrix"""
+    if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
-
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
-    # Generación y retorno de nueva matriz
-    return [[round(num / div, 2) for num in row] for row in matrix]
+    if not matrix:
+        raise TypeError("matrix must be a matrix \
+(list of lists) of integers/floats")
+    mtx = matrix
+    new_matrix = []
+    lenght = len(mtx[0])
+    for i in range(0, len(mtx)):
+        new_matrix.append([])
+        for j in range(0, len(mtx[i])):
+            if len(mtx[i]) != lenght:
+                raise TypeError("Each row of the matrix \
+must have the same size")
+            if type(mtx[i][j]) is not int and type(mtx[i][j]) is not float:
+                raise TypeError("matrix must be a matrix \
+(list of lists) of integers/floats")
+            new_matrix[i].append(round(mtx[i][j] / div, 2))
+    return new_matrix
