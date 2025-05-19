@@ -1,5 +1,4 @@
 >>> say_my_name = __import__('3-say_my_name).say_my_name
->>> from say_my_name import say_my_name
 >>> say_my_name("Fede", "Paganini")
 My name is Fede Gomez
 >>> say_my_name("Fede")
