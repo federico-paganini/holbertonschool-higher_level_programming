@@ -14,12 +14,22 @@ def matrix_divided(matrix, div):
     Divides all elements of a matrix by a number and returns a new matrix
     with results rounded to 2 decimal places.
     """
-    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not (
+        isinstance(matrix, list) or not 
+        all(isinstance(row, list) for row in matrix)
+        ):
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats"
+            )
 
-    elements_check = all(isinstance(num, (int, float)) for row in matrix for num in row)
+    elements_check = all(
+        isinstance(num, (int, float)) 
+        for row in matrix for num in row
+        )
     if not elements_check:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats"
+            )
 
     row_check = all(len(row) == len(matrix[0]) for row in matrix)
     if not row_check:
