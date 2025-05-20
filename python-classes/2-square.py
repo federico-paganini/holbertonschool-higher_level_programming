@@ -2,7 +2,8 @@
 """
 This module defines the Square class for representing a square shape.
 
-The Square class includes a private size attribute with type and value validation.
+The Square class includes a private size attribute with type
+and value validation.
 """
 
 
