@@ -24,5 +24,4 @@ def max_integer(list=[]):
     for num in list[1:]:
         if num > max_value:
             max_value = num
-
     return max_value
