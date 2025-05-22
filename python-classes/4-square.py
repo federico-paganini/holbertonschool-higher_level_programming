@@ -9,6 +9,14 @@ It also provides a method to calculate the area of the square.
 
 
 class Square:
+    """
+    Represents a square with a specific size.
+
+    This class provides methods to set and get the size of the square,
+    while ensuring that it is always a non-negative integer.
+    It also includes a method to calculate the area.
+    """
+
     def __init__(self, size=0):
         """
         Initializes a new Square instance.
