@@ -69,7 +69,8 @@ class Square:
             value (tuple): A tuple of 2 positive integers.
 
         Raises:
-            TypeError: If the value is not a valid tuple of 2 positive integers.
+            TypeError: If the value is not a valid tuple
+            of 2 positive integers.
         """
         if (
             not isinstance(value, tuple)
@@ -91,10 +92,12 @@ class Square:
 
     def my_print(self):
         """
-        Print the square using the '#' character with the given position offset.
+        Print the square using the '#' character with
+        the given position offset.
 
         If size is 0, an empty line is printed.
-        The position is used to offset the square both vertically and horizontally.
+        The position is used to offset the square
+        both vertically and horizontally.
         """
         if self.__size == 0:
             print()
