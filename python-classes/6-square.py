@@ -11,8 +11,8 @@ class Square:
     """Represents a square with size and position."""
 
     def __init__(self, size=0, position=(0, 0)):
-         """
-         Initialize a new square.
+        """
+        Initialize a new square.
 
         Args:
             size (int): The size of the square sides. Must be >= 0.
