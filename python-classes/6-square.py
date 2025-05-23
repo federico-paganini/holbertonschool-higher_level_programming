@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Module that defines a Square class with size and position.
+"""
+Module that defines a Square class with size and position.
 
 This module provides a Square class capable of calculating its area
 and printing a visual representation of itself considering its position.
@@ -10,7 +11,8 @@ class Square:
     """Represents a square with size and position."""
 
     def __init__(self, size=0, position=(0, 0)):
-         """Initialize a new square.
+         """
+         Initialize a new square.
 
         Args:
             size (int): The size of the square sides. Must be >= 0.
@@ -22,7 +24,8 @@ class Square:
 
     @property
     def size(self):
-        """Getter for the size of the square.
+        """
+        Getter for the size of the square.
 
         Returns:
             int: The current size of the square.
@@ -31,7 +34,8 @@ class Square:
 
     @property
     def position(self):
-          """Getter for the position of the square.
+        """
+        Getter for the position of the square.
 
         Returns:
             tuple: The current position of the square.
@@ -40,7 +44,8 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Setter for the size of the square.
+        """
+        Setter for the size of the square.
 
         Args:
             value (int): The new size of the square. Must be an integer >= 0.
@@ -57,7 +62,8 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """Setter for the position of the square.
+        """
+        Setter for the position of the square.
 
         Args:
             value (tuple): A tuple of 2 positive integers.
@@ -75,7 +81,8 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Calculate the area of the square.
+        """
+        Calculate the area of the square.
 
         Returns:
             int: The area of the square.
@@ -83,7 +90,8 @@ class Square:
         return self.__size**2
 
     def my_print(self):
-        """Print the square using the '#' character with the given position offset.
+        """
+        Print the square using the '#' character with the given position offset.
 
         If size is 0, an empty line is printed.
         The position is used to offset the square both vertically and horizontally.
