@@ -1,1 +1,1 @@
-## Python begginer projects repository.
+## Python projects repository.
