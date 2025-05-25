@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+"""
+Defines a Rectangle class with validated width and height attributes.
+
+This module provides:
+- A Rectangle class with encapsulated attributes.
+- Size validation through a shared function.
+- Use of property decorators for controlled access.
+"""
 
 
 class Rectangle:
