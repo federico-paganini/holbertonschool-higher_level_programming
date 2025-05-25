@@ -51,7 +51,7 @@ class Rectangle:
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
 
     def __del__(self):
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     def perimeter(self):
