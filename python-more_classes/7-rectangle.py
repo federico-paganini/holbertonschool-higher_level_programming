@@ -51,7 +51,7 @@ class Rectangle:
 
         return "\n".join(
             [
-                f"{Rectangle.print_symbol}" * self.__width
+                f"{self.print_symbol}" * self.__width
                 for _ in range(self.__height)
             ]
         )
