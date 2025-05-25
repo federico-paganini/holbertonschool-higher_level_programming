@@ -48,7 +48,7 @@ class Rectangle:
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
 
     def __del__(self):
-        print("Bye Rectangle...")
+        print("Bye rectangle...")
 
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
