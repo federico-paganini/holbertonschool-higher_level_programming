@@ -34,10 +34,7 @@ class Rectangle:
             return ""
 
         return "\n".join(
-            [
-                f"{self.print_symbol}" * self.__width
-                for _ in range(self.__height)
-            ]
+            [f"{self.print_symbol}" * self.__width for _ in range(self.__height)]
         )
 
     def __del__(self):
@@ -71,7 +68,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        if not isintance(rect_1, Rectangle):
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rec_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
