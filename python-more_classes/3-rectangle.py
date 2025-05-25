@@ -38,9 +38,6 @@ class Rectangle:
     def height(self, value):
         self.__height = validate_size(value, "height")
 
-    def __repr__(self):
-        return f"Rectangle({self.__width}, {self.__height})"
-
     def __str__(self):
         if self.__height == 0 or self.__width == 0:
             return ""
