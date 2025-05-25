@@ -18,9 +18,12 @@ class Rectangle:
     Attribute access is managed via properties with validation.
     """
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -48,6 +51,7 @@ class Rectangle:
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
 
     def __del__(self):
+        number_of_instances -= 1
         print("Bye rectangle...")
 
     def perimeter(self):
