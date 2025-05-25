@@ -1,7 +1,22 @@
 #!/usr/bin/python3
+"""
+This module defines a Node class and a SinglyLinkedList class.
+The Node class represents a single element in a singly linked list.
+The SinglyLinkedList class supports insertion of nodes in sorted (ascending) order.
+"""
 
 
 class SinglyLinkedList:
+    """
+    Represents a singly linked list.
+
+    Attributes:
+        __head (Node): Private head node of the list.
+
+    Methods:
+        sorted_insert(value): Inserts a new Node in the correct sorted position.
+        __str__(): Returns a string representation of the list, one value per line.
+    """
 
     def __init__(self):
         self.__head = None
