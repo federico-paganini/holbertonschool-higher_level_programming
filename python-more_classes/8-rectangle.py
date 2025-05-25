@@ -34,7 +34,10 @@ class Rectangle:
             return ""
 
         return "\n".join(
-            [f"{self.print_symbol}" * self.__width for _ in range(self.__height)]
+            [
+                f"{self.print_symbol}" * self.__width
+                for _ in range(self.__height)
+            ]
         )
 
     def __del__(self):
