@@ -45,6 +45,18 @@ class SinglyLinkedList:
 
 
 class Node:
+    """
+    Represents a node of a singly linked list.
+
+    Attributes:
+        __data (int): The data value of the node.
+        __next_node (Node): Reference to the next node in the list.
+
+    Properties:
+        data (int): Gets or sets the data (must be integer).
+        next_node (Node): Gets or sets the next node (must be Node or None).
+    """
+
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
