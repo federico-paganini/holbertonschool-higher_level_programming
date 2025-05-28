@@ -6,7 +6,7 @@ It adds a method to print the list elements in ascending sorted order.
 """
 
 
-class MyClass(list):
+class MyList(list):
     """
     MyList is a subclass of the built-in list.
     It includes an additional method to print the list sorted in ascending order,
