@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This module defines a custom class MyList that inherits
-from the built-in list.
+the built-ins in list.
 It adds a method to print the list elements in ascending sorted order.
 """
 
