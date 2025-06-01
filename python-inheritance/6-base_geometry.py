@@ -2,7 +2,8 @@
 """
 This module defines a base geometry class with an unimplemented area method.
 
-The class is intended to be subclassed by more specific geometric shape classes,
+The class is intended to be subclassed by more specific geometric
+shape classes,
 which should provide their own implementation of the area method.
 """
 
