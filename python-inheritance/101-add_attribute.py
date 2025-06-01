@@ -4,7 +4,7 @@ This module defines a function that adds a new attribute to an object.
 """
 
 
-def add_attr(obj, attr, value):
+def add_attribute(obj, attr, value):
     """
     Adds a new attribute to an object if it doesn't already exist.
 
