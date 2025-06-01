@@ -16,6 +16,23 @@ class BaseGeometry:
     It includes a placeholder method for calculating area.
     """
 
+        def integer_validator(self, name, value):
+            """
+            Verify if the size of the a geometric shape is valid.
+
+            Raises:
+                TypeError: "<Geometric shape name> must be an integer" 
+                            if the value is not an int.
+
+                ValueError: "<Geometric shape name> must be greater than 0"
+                            if the value is not greater than 0.
+            """
+            if type(value) is not int:
+                raise TypeError(f"{name:s} must be an integer")
+
+            if value <= 0:
+                raise ValueError(f"{name:s} must be greater than 0")
+
     def area(self):
         """
         Calculate the area of a geometric shape.
