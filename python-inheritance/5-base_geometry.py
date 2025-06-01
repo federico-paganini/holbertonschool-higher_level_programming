@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-This module defines an empty class called BaseGeometry.
+This module defines a base geometry class with an unimplemented area method.
 
-The class is intended to serve as a base for geometry-related classes,
-and may be extended in future implementations.
+The class is intended to be subclassed by more specific geometric shape classes,
+which should provide their own implementation of the area method.
 """
 
 
@@ -11,9 +11,18 @@ class BaseGeometry:
     """
     A base class for geometry-related operations.
 
-    Currently, this class does not implement any functionality,
-    but is intended to be used as a parent class for more specific
-    geometry classes in the future.
+    This class serves as a blueprint for geometric shapes.
+    It includes a placeholder method for calculating area.
     """
 
-    pass
+    def area(self):
+        """
+        Calculate the area of a geometric shape.
+
+        This method is intended to be overridden in subclasses.
+        It raises an Exception to indicate that it has not been implemented.
+
+        Raises:
+            Exception: Always, with the message "area() is not implemented".
+        """
+        raise Exception("area() is not implemented")
