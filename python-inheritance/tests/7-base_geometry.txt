@@ -1,1 +1,14 @@
-BaseGeometry = __import__('7-base_geometry')
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> BaseGeometry.integer_validator("Square", 5)
+
+>>> BaseGeometry.integer_validator("Square", "5")
+Traceback (most recent call last):
+    ...
+TypeError: Square must be an integer
+
+
+>>> BaseGeometry.integer_validator("Square", -6)
+Traceback (most recent call last):
+    ...
+TypeError: Square must be greater than 0
