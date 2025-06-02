@@ -17,7 +17,7 @@ class VerboseList(list):
         print(f"Removed {item} from the list.")
         super().remove(item)
 
-    def pop(self, index):
+    def pop(self, index=-1):
         try:
             item = self[index]
         except IndexError:
