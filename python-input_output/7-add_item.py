@@ -27,4 +27,4 @@ except FileNotFoundError:
     data = []
 
 data.extend(av)
-save_json("add_item.json", data)
+save_json(data, "add_item.json")
