@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
 This module provides a function `append_after` that allows you to insert
-a specific line of text (`new_string`) immediately **after** every line in a file
+a specific line of text (`new_string`)
+immediately **after** every line in a file
 that contains a specific `search_string`.
 """
 
