@@ -9,7 +9,8 @@ that contains a specific `search_string`.
 
 def append_after(filename="", search_string="", new_string=""):
     """
-    Inserts a line of text (new_string) after each line that contains a given search_string.
+    Inserts a line of text (new_string) after each line
+    that contains a given search_string.
 
     Args:
         filename (str): Name of the file to modify.
