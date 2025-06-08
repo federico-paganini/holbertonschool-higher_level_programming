@@ -15,7 +15,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         if isinstance(attrs, list) and all(
             type(attr) is str for attr in attrs
         ):
