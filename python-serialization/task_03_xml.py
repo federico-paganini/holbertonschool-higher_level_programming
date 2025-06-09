@@ -11,62 +11,53 @@ Functions:
 import xml.etree.ElementTree as ET
 
 
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
+
+
 def serialize_to_xml(dictionary, filename):
     """
-    Serialize a Python dictionary into an XML file.
+    Serialize a Python dictionary to XML format and save to file.
 
     Args:
-        dictionary (dict): The dictionary to serialize.
-        filename (str): The name of the file to write the XML to.
-
-    Returns:
-        None
+        dictionary (dict): The dictionary to serialize
+        filename (str): The filename to save the XML data
     """
     root = ET.Element("data")
 
     for key, value in dictionary.items():
-        child = ET.SubElement(root, key)
-        child.text = str(value)  # XML stores text, so convert everything to str
+        child_element = ET.SubElement(root, key)
+        child_element.text = str(value)
 
     tree = ET.ElementTree(root)
-    try:
-        tree.write(filename, encoding="utf-8", xml_declaration=True)
-    except Exception:
-        pass  # silently ignore file writing errors (optional)
+
+    xml_str = ET.tostring(root, encoding="unicode")
+    dom = minidom.parseString(xml_str)
+    pretty_xml = dom.toprettyxml(indent="    ")
+
+    lines = pretty_xml.split("\n")[1:]
+    lines = [line for line in lines if line.strip()]
+
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
 
 
 def deserialize_from_xml(filename):
     """
-    Deserialize an XML file back into a Python dictionary.
+    Deserialize XML data from file back to a Python dictionary.
 
     Args:
-        filename (str): The name of the XML file to read from.
+        filename (str): The filename to read XML data from
 
     Returns:
-        dict or None: The deserialized dictionary, or None if an error occurs.
+        dict: The deserialized dictionary
     """
-    try:
-        tree = ET.parse(filename)
-        root = tree.getroot()
-        result = {}
+    tree = ET.parse(filename)
+    root = tree.getroot()
 
-        for child in root:
-            value = child.text
+    result_dict = {}
 
-            # Optional: Try to recover data types (int, float, bool)
-            if value == "True":
-                result[child.tag] = True
-            elif value == "False":
-                result[child.tag] = False
-            else:
-                try:
-                    result[child.tag] = int(value)
-                except (ValueError, TypeError):
-                    try:
-                        result[child.tag] = float(value)
-                    except (ValueError, TypeError):
-                        result[child.tag] = value  # keep as string
+    for child in root:
+        result_dict[child.tag] = child.text
 
-        return result
-    except Exception:
-        return None
+    return result_dict
