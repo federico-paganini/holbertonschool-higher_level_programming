@@ -22,7 +22,7 @@ def fetch_and_save_posts(
     resp = requests.get(fetch_URL)
     print(f"Status Code: {resp.status_code}")
 
-    if resp.ok:
+    if resp.status_code == 200:
         dic_resp = resp.json()
         fieldnames = ["id", "title", "body"]
         filename = "posts.csv"
