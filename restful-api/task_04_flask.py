@@ -33,7 +33,7 @@ def add_user():
     new_user = request.get_json()
 
     if not new_user or "username" not in new_user:
-        return (jsonify({"error": "Username is required"})), 400
+        return jsonify({"error": "Username is required"}), 400
 
     users[new_user["username"]] = new_user
 
