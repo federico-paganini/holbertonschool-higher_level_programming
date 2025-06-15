@@ -37,8 +37,8 @@ def add_user():
 
     users[new_user["username"]] = new_user
 
-    return jsonify(new_user), 201
+    return jsonify({"message": "User added", "user": new_user}), 201
 
 
 if __name__ == "__main__":
-    app.run(debugg=True)
+    app.run(debug=True)
