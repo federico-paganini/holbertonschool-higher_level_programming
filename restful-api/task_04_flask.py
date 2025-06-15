@@ -20,12 +20,12 @@ def status():
     return f"OK"
 
 
-@app.route("/user/<username>")
+@app.get("/users/<username>")
 def get_user(username):
-    if username in users:
-        return jsonify(users.get(username))
-    else:
+    if username not in users:
         return jsonify({"error": "User not found"}), 404
+
+    return jsonify(users.get(username))
 
 
 @app.post("/add_user")
