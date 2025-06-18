@@ -10,7 +10,6 @@ from flask_jwt_extended import jwt_required
 from flask_jwt_extended import JWTManager
 
 
-
 app = Flask(__name__)
 
 auth = HTTPBasicAuth()
@@ -19,14 +18,23 @@ jwt = JWTManager(app)
 
 
 users = {
-    "fede": {"username": "Federico", "password": generate_password_hash("fede1234"), "role": "user"},
-    "holberton": {"username": "Holberton", "password": generate_password_hash("Holberton10647"), "role": "admin"}
+    "fede": {
+        "username": "Federico",
+        "password": generate_password_hash("fede1234"),
+        "role": "user",
+    },
+    "holberton": {
+        "username": "Holberton",
+        "password": generate_password_hash("Holberton10647"),
+        "role": "admin",
+    },
 }
 
 
 @auth.error_handler
 def unauthorized():
     return jsonify({"error": "Unauthorized"}), 401
+
 
 @auth.verify_password
 def verify_password(username, password):
@@ -35,6 +43,7 @@ def verify_password(username, password):
         return None
     if check_password_hash(user["password"], password):
         return user
+
 
 @app.get("/basic-protected")
 @auth.login_required
@@ -50,16 +59,16 @@ def login():
 
     if not user or not check_password_hash(user["password"], password):
         return jsonify({"error": "Unauthorized"}), 401
-    
+
     access_token = create_access_token(identity=username)
     return jsonify(access_token=access_token)
+
 
 @app.get("/jwt-protected")
 @jwt_required()
 def protected():
     current_user = get_jwt_identity()
     return f"JWT Auth: Access Granted"
-
 
 
 if __name__ == "__main__":
