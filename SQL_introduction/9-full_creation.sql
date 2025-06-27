@@ -1,5 +1,5 @@
--- Crete a new table and add multiple rows.
-CREATE TABLE IF NOT EXIST second_table(id INT, name VARCHAR(256), score INT);
+-- Create a new table and add multiple rows.
+CREATE TABLE IF NOT EXISTS second_table(id INT, name VARCHAR(256), score INT);
 INSERT INTO second_table(id, name, score) VALUES
 (1, 'John', 10),
 (2, 'Alex', 3),
