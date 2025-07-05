@@ -1,5 +1,21 @@
 #!/usr/bin/python3
 
+"""
+This script connects to a MySQL database and retrieves all rows
+from the 'states' table, ordered by their ID in ascending order.
+
+Usage:
+    ./script_name.py <username> <password> <database_name>
+
+Example:
+    ./0-select_states.py root mypassword hbtn_0e_0_usa
+
+Modules:
+    sys - to retrieve command-line arguments
+    MySQLdb - to connect and interact with a MySQL database
+"""
+
+
 if __name__ == "__main__":
     import sys
     import MySQLdb
