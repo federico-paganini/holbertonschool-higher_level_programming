@@ -21,7 +21,6 @@ if __name__ == "__main__":
     import MySQLdb
 
     av = sys.argv[1:]
-    ac = len(av)
 
     conn = MySQLdb.connect(
         host="localhost",
