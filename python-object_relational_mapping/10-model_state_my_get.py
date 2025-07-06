@@ -11,6 +11,7 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import func
+from sqlalchemy.orm.exc import NoResultFound
 from model_state import Base, State
 
 if __name__ == "__main__":
