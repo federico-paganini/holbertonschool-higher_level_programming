@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.get(State, 1)
+    state = session.query(State).filter(State.id == 1).one_or_none()
 
     if state:
         print(f"{state.id}: {state.name}")
