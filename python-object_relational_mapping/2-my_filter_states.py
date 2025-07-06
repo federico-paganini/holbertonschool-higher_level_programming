@@ -4,7 +4,8 @@ Script that connects to a MySQL database and retrieves states
 matching a specific name.
 
 Usage:
-    ./script_name.py <mysql_username> <mysql_password> <database_name> <state_name>
+    ./script_name.py <mysql_username> <mysql_password> <database_name>
+        <state_name>
 
 Arguments:
     mysql_username  - The MySQL username
@@ -31,9 +32,7 @@ if __name__ == "__main__":
         charset="utf8",
     )
     cur = conn.cursor()
-    cur.execute(
-        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(av[3])
-    )
+    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(av[3]))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
