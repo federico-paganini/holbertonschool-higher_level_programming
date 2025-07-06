@@ -1,4 +1,4 @@
-#!/usr/bin/python3ls
+#!/usr/bin/python3
 
 """
 Lists all city names from the given state in a MySQL database.
