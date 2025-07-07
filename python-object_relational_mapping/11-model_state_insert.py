@@ -5,7 +5,8 @@ Adds the State object "Louisiana" to the database.
 Usage:
     ./script.py <mysql_username> <mysql_password> <database_name>
 
-Connects to a MySQL server on localhost:3306 and prints the id of the new state.
+Connects to a MySQL server on localhost:3306 and prints
+the id of the new state.
 """
 
 import sys
