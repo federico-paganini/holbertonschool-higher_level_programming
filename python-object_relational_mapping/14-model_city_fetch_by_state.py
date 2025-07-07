@@ -2,9 +2,6 @@
 """
 Prints all City objects from the database hbtn_0e_14_usa.
 Format: <state name>: (<city id>) <city name>
-
-Usage:
-    ./14-model_city_fetch_by_state.py <mysql_username> <mysql_password> <database_name>
 """
 
 import sys
