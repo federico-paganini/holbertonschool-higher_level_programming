@@ -27,7 +27,8 @@ if __name__ == "__main__":
         session.query(City, State)
         .filter(City.state_id == State.id)
         .order_by(City.id)
+        .all()
     )
 
-    for city in results:
-        print(f"{city.state.name}: ({city.id}) {city.name}")
+    for city, state in results:
+        print(f"{state.name}: ({city.id}) {city.name}")
