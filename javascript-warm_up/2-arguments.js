@@ -1,5 +1,5 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
+const argv = require('process').argv
 
 const av = argv.slice(2);
 
