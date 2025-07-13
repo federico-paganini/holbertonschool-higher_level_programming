@@ -6,4 +6,4 @@ function add(a, b) {
   return a + b;
 }
 
-console.log(add(av[0], av[1]));
+console.log(add(parseInt(av[0], 10), parseInt(av[1], 10)));
