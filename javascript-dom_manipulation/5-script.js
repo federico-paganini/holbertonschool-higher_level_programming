@@ -1,4 +1,4 @@
-const update_header = document.getElementById("update_header");
+const update_header = document.querySelector("#update_header");
 
 update_header.addEventListener("click", () => {
     const header_element = document.querySelector("header");
