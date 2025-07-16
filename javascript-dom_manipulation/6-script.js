@@ -2,7 +2,7 @@ fetch_name();
 
 async function fetch_name() {
     const NAME_URL = "https://swapi-api.hbtn.io/api/people/5/?format=json";
-    const character_tag = document.getElementById("character");
+    const character_tag = document.querySelector("#character");
     try {
         const response = await fetch(NAME_URL);
         if (!response.ok) {
