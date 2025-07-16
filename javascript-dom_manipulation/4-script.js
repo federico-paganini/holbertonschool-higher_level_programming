@@ -4,4 +4,4 @@ add_item_btn.addEventListener("click", () => {
     const new_element = document.createElement("li");
     new_element.innerText = "Item";
     ul_list.appendChild(new_element);
-})
+});
