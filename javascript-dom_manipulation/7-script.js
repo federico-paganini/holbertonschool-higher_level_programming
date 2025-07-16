@@ -1,6 +1,6 @@
-fetch_name();
+fetch_movies();
 
-async function fetch_name() {
+async function fetch_movies() {
     const NAME_URL = "https://swapi-api.hbtn.io/api/films/?format=json";
     const moviesList = document.querySelector("#list_movies");
     try {
