@@ -1,4 +1,4 @@
-const toggle_button = document.getElementById("toggle_header");
+const toggle_button = document.querySelector("toggle_header");
 toggle_button.addEventListener("click", () => {
     const header = document.querySelector("header");
     if (header.classList.contains("red")) {
