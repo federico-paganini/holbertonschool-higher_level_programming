@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fetchBtn.addEventListener('click', () => {
     const language = languageBox.value;
-    const HELLOURL = `https://hellosalut.stefanbohacek.com/?lang=${language}`;
+    const helloURL = `https://hellosalut.stefanbohacek.com/?lang=${language}`;
 
     if (!language) {
       alert('Please, select a language from the box');
       return;
     }
 
-    fetchHello(HELLOURL);
+    fetchHello(helloURL);
   });
 });
 
