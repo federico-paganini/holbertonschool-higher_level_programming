@@ -1,5 +1,5 @@
-const tag_button = document.querySelector("#red_header");
-tag_button.addEventListener("click", function () {
-    const header = document.querySelector("header");
-    header.style.color = "#FF0000";
+const tagButton = document.querySelector('#red_header');
+tagButton.addEventListener('click', function () {
+  const header = document.querySelector('header');
+  header.style.color = '#FF0000';
 });
