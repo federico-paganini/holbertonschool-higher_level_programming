@@ -7,6 +7,7 @@ def generate_invitations(template, attendees):
         return
     if not isinstance(attendees, list) or not all(isinstance(item, dict) for item in attendees):
         print("Error: Attendees must be a list of dictionaries.")
+        return
 
     if not template.strip():
         print("Template is empty, no output files generated.")
