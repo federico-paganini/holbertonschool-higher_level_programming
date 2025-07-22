@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module that defines a class with restricted instance attributes."""
+
+
 class LockedClass():
     """Class that prevents dynamic attribute creation, except 'first_name'.
 
